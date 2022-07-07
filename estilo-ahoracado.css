@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(wallpaper-de-madera-oscura-pixsic.jpg);
+  background-size: 100%;
+}
+
+.main-container {
+  /*background-color: bisque;*/
+  max-width: 800px;
+  height: 550px;
+  margin: auto;
+}
+h1.titulo {
+  font-size: 25px;
+  color: aliceblue;
+  margin: 50px auto 50px auto;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+h1#msg-final {
+
+  text-align: right 10px;
+  color: crimson;
+  transition: all .5s ease;
+  transform: scale(0);
+  min-height: 50px;
+  margin-bottom: 0;
+}
+/*Transcion para que aparezca Felicidades o gameover*/
+.zoom-in {
+  transform: scale(1) !important;
+}
+#acierto {
+  text-align: center;
+  min-height: 24px;
+  transform: scale(0);
+}
+.acierto {
+  animation: zoomInOut 1s ease;
+
+}
+.rojo {
+  color: red;
+}
+.verde {
+  color: green;
+}
+@keyframes zoomInOut {
+  0% { transform: scale(0); }
+  50% { transform: scale(1); }
+  70% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+h2.palabra {
+  /*Codigo que controla la posicion de las rallitas ______*/
+  position: relative;
+  margin: 175px auto 25px auto;
+  /*text-align: center;*/
+  left: -30px;
+  bottom: 20px;
+  color: royalblue;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+.flex-row {
+  /*background-color: blueviolet;*/
+  position: relative;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px auto; 
+  
+}
+
+/*Intentos restantes*/
+.col {
+  color: aliceblue;
+  position: relative;
+  text-align: center;
+  bottom: 385px;
+  width: 100%;
+}
+/*Contenedor de elegir otra palabra*/
+.col2 {
+  position: relative;
+  width: 200px;
+  left: 25px;
+  bottom: 225px;
+}
+/*contenedor dame una pista*/
+.col3 {
+  position: relative;
+  width: 250px;
+  bottom: 265px;
+  left: 575px;
+}
+/*Contenedor abecedario;*/
+.col4 {
+  position: relative;
+  bottom: 130px;
+  width: 100%;
+  border: 3px solid white;
+  
+}
+/* Color de los intentos restantes*/
+h3 span {
+   color: rgb(255, 0, 81);
+}
+
+/* Color de los botones inabilitados(usados)*/
+.letra:disabled {
+  color:rgba(255, 0, 0, 0.5);
+}
+/*Contenedor de las imagenes*/
+picture {
+  position: relative;
+  right: 300px;
+  top: 100px;
+}
+/*Posicionamiento de las imagenes*/
+picture img {
+  position: absolute;
+  top: -203px;
+  left: -205px;
+  height: 225px;
+}
+#image5, #image4, #image3,
+#image2, #image1, #image0 {
+  opacity: 0;
+  transition: opacity .3s ease;
+  
+}
+/*Armar la imagen por cada fallo*/
+.fade-in {
+  opacity: 1 !important;
+}
+
+/*Cuando se gane la partida hacer un recuadro a la palabra encontrada*/
+.encuadre {
+  border: 2px dashed crimson;
+  padding: 3px 2px 2px 6px;
+}
+
+#hueco-pista {
+  position: relative;
+  top: 15px;
+  left: 5px;
+  color: rgb(230, 214, 214);
+}
+
+#reset {
+  background-color: darkcyan;
+  padding: 10px 20px 10px 20px;
+}
+
+/*Este codigo edita el boton de pista*/
+#pista {
+  background-color: darkcyan;
+  padding: 10px 20px 10px 20px;
+}
+
+#abcdario {
+  font-size: 100px;
+  width: 100%;
+}
+
+.letra {
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  color: darkgoldenrod;
+  margin: 2px 2px;
+  background-color: black;
+}
